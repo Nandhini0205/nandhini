@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <title>INTERFACE</title>
+    <style>
+    form {
+        width: 300px;
+        margin: 50px auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      
+      label {
+        display: block;
+        margin-bottom: 10px;
+      }
+      
+      input[type="text"], input[type="password"], select {
+        width: 100%;
+        height: 30px;
+        margin-bottom: 20px;
+        padding: 10px;
+        border: 1px solid #ccc;
+      }
+      
+      button[type="submit"] {
+        width: 100px;
+        height: 30px;
+        background-color: #4CAF50;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      
+      button[type="submit"]:hover {
+        background-color: #3e8e41;
+      }
+      
+      profile-container {
+        width: 80%;
+        margin: 40px auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      
+      .personal-info, .academic-info {
+        margin-bottom: 20px;
+      }
+      
+      h3 {
+        margin-top: 0;
+      }
+      
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+      
+      li {
+        margin-bottom: 10px;
+      }
+      
+      .additional-options {
+        text-align: center;
+      }
+      
+      button {
+        width: 150px;
+        height: 30px;
+        margin: 10px;
+        background-color: #4CAF50;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .search-container {
+  width: 80%;
+  margin: 40px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#search-form {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+#search-input {
+  width: 70%;
+  height: 30px;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+#filter-select {
+  width: 20%;
+  height: 30px;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+#search-button {
+  width: 100px;
+  height: 30px;
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#search-results {
+  margin-top: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: left;
+}
+
+th {
+  background-color: #f0f0f0;
+}
+
+.advisors-container {
+  width: 80%;
+  margin: 40px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#advisors-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: left;
+}
+
+th {
+  background-color: #f0f0f0;
+}
+
+.contact-options {
+  margin-top: 20px;
+  text-align: center;
+}
+
+button {
+  width: 150px;
+  height: 30px;
+  margin: 10px;
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.class-list-container {
+  width: 80%;
+  margin: 40px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#class-list-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: left;
+}
+
+th {
+  background-color: #f0f0f0;
+}
+
+.actions {
+  margin-top: 20px;
+  text-align: center;
+}
+
+button {
+  width: 150px;
+  height: 30px;
+  margin: 10px;
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.update-profile-container {
+  width: 80%;
+  margin: 40px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#update-profile-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.office-hours {
+  margin-bottom: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: left;
+}
+
+
+
+th {
+  background-color: #f0f0f0;
+}
+
+.contact-info {
+  margin-bottom: 20px;
+}
+
+.save-changes {
+  text-align: center;
+}
+
+button {
+  width: 150px;
+  height: 30px;
+  margin: 10px;
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.record-management-actions {
+  margin-bottom: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: left;
+}
+
+th {
+  background-color: #f0f0f0;
+}
+
+.actions {
+  text-align: center;
+}
+
+button {
+  width: 150px;
+  height: 30px;
+  margin: 10px;
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.record-management-container {
+  width: 80%;
+  margin: 40px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.record-management-actions {
+  margin-bottom: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: left;
+}
+
+th {
+  background-color: #f0f0f0;
+}
+
+.actions {
+  text-align: center;
+}
+
+button {
+    width: 150px;
+  height: 30px;
+  margin: 10px;
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
+.dashboard-container {
+  width: 80%;
+  margin: 40px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 1px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.chart-container {
+  width: 50%;
+  height: 300px;
+  margin: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.key-metrics {
+  margin-top: 40px;
+}
+
+.filter-options {
+  margin-top: 40px;
+}
+ </style> 
+    <title>INTERFACE</title>
+    
+    
+<body>
+   <!--login form-->
+    <form id="login-form">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+      
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+      
+        <label for="role">Role:</label>
+        <select id="role" name="role" required>
+          <option value="student">Student</option>
+          <option value="faculty-member">Faculty Member</option>
+          <option value="administrator">Administrator</option>
+        </select>
+      
+        <button type="submit">Login</button>
+      </form>
+      <p> 
+        <a href="#">Forgot Password?</a>
+        <a href="#">Register</a>
+        <a href="#">login</a>
+
+      </p>
+      <!--personal information-->
+      <div class="profile-container">
+        <h2>Profile</h2>
+        <div class="personal-info">
+          <h3>Personal Information</h3>
+          <p>Name: <span id="name">John Doe</span></p>
+          <img id="photo" src="image.jpg" alt="Profile Photo">
+          <p>Contact Details:</p>
+          <ul>
+            <li>Email: <span id="email">johndoe@example.com</span></li>
+            <li>Phone: <span id="phone">123-456-7890</span></li>
+          </ul>
+        </div>
+        <div class="academic-info">
+  D        <h3>Academic Information</h3>
+          <h4>Courses:</h4>
+          <ul id="courses">
+            <li>Mathematics</li>
+            <li>Science</li>
+            <li>English</li>
+          </ul>
+          <h4>Grades:</h4>
+          <ul id="grades">
+            <li>Mathematics: A-</li>
+            <li>Science: B+</li>
+            <li>English: A</li>
+          </ul>
+          <h4>Attendance:</h4>
+          <li>Mathematics: 95%</li>
+      <li>Science: 90%</li>
+      <li>English: 98%</li>
+    </ul>
+  </div>
+  <div class="additional-options">
+    <button id="edit-profile">Edit Profile</button>
+    <button id="change-password">Change Password</button>
+    <button id="view-transcript">View Transcript</button>
+    <button id="view-schedule">View Schedule</button>
+  </div>
+</div>
+ <!--search other-->
+<div class="search-container">
+    <h2>Search Students</h2>
+    <form id="search-form">
+      <input type="text" id="search-input" placeholder="Search...">
+      <select id="filter-select">
+        <option value="name">Name</option>
+        <option value="department">Department</option>
+        <option value="year">Year</option>
+      </select>
+      <button id="search-button">Search</button>
+    </form>
+    <div id="search-results">
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Department</th>
+            <th>Year</th>
+          </tr>
+        </thead>
+        <tbody id="results-table">
+          <!-- Search results will be displayed here -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <!--contact details-->
+  <div class="advisors-container">
+    <h2>Faculty Advisors</h2>
+    <table id="advisors-table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Department</th>
+          <th>Contact</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Dr. John Doe</td>
+          <td>CS</td>
+          <td>
+            <a href="mailto:jdoe@example.com">Email: jdoe@example.com</a>
+            <br>
+            <a href="tel:123-456-7890">Phone: 123-456-7890</a>
+          </td>
+        </tr>
+        <tr>
+          <td>Dr. Jane Smith</td>
+          <td>Math</td>
+          <td>
+            <a href="mailto:jsmith@example.com">Email: jsmith@example.com</a>
+            <br>
+            <a href="tel:987-654-3210">Phone: 987-654-3210</a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="contact-options">
+      <button id="send-email">Send Email</button>
+      <button id="make-call">Make Phone Call</button>
+    <button id="schedule-meeting">Schedule Meeting</button>
+  </div>
+</div>
+<!--faculty member-->
+<div class="class-list-container">
+    <h2>Manage Class List</h2>
+    <h3>Course: {{ courseName }}</h3>
+    <table id="class-list-table"></table>
+      <thead>
+        <tr>
+          <th>Student Name</th>
+          <th>Photo</th>
+          <th>Contact</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="student in students">
+          <td>{{ student.name }}</td>
+          <td><img ng-src="{{ student.photo }}" alt="Student Photo"></td>
+          <td>
+            <a href="mailto:{{ student.email }}">{{ student.email }}</a>
+            <br>
+            <a href="tel:{{ student.phone }}">{{ student.phone }}</a>
+          </td>
+        </tr>
+      </tbody>
+    <div class="actions">
+      <button id="add-student">Add Student</button>
+      <button id="remove-student">Remove Student</button>
+      <button id="edit-student-info">Edit Student Info</button>
+      <button id="send-email-all">Send Email to All</button>
+    </div>
+</div>
+      <!-- update search-->
+      <div class="update-profile-container">
+        <h2>Update Profile</h2>
+        <form id="update-profile-form">
+          <h3>Update Profile Information</h3>
+          <div class="office-hours">
+            <label>Office Hours:</label>
+            <table>
+              <tr>
+                <th>Day</th>
+                <th>Hours</th>
+              </tr>
+              <tr>
+                <td>Monday</td>
+                <td><input type="text" id="monday-hours" name="monday-hours"></td>
+              </tr>
+              <tr>
+                <td>Tuesday</td>
+                <td><input type="text" id="tuesday-hours" name="tuesday-hours"></td>
+              </tr>
+              <tr>
+                <td>Wednesday</td>
+                <td><input type="text" id="wednesday-hours" name="wednesday-hours"></td>
+              </tr>
+              <tr>
+                <td>Thursday</td>
+                <td><input type="text" id="thursday-hours" name="thursday-hours"></td>
+              </tr>
+              <tr>
+                <td>Friday</td>
+                <td><input type="text" id="friday-hours" name="friday-hours"></td>
+              </tr>
+            </table>
+          </div>
+          <div class="contact-info">
+            <label>Contact Email:</label>
+            <input type="email" id="contact-email" name="contact-email">
+            <br>
+            <label>Phone Number:</label>
+            <input type="tel" id="phone-number" name="phone-number">
+          </div>
+          <div class="save-changes">
+            <button id="cancel">Cancel</button>
+            <button id="save">Save</button>
+          </div>
+        </form>
+      </div>
+      <!--administrative interface-->
+      <!-- Main Container -->
+<div class="admin-dashboard">
+    <!-- Header Section -->
+    <header>
+      <h1>Administrator Interface</h1>
+    </header>
+  
+    <!-- Manage Student and Faculty Records -->
+    <div class="record-management">
+      <h2>Manage Records</h2>
+      <div class="tab-container">
+        <button class="tab-button" onclick="openTab('student-tab')">Students</button>
+        <button class="tab-button" onclick="openTab('faculty-tab')">Faculty</button>
+      </div>
+  
+      <!-- Student Records Tab -->
+      <div id="student-tab" class="tab-content">
+        <h3>Student Records</h3>
+        <form id="student-form">
+          <label for="student-name">Name:</label>
+          <input type="text" id="student-name" name="student-name"><br><br>
+          <label for="student-email">Email:</label>
+          <input type="email" id="student-email" name="student-email"><br><br>
+          <label for="student-id">ID:</label>
+          <input type="number" id="student-id" name="student-id"><br><br>
+          <button id="add-student-btn">Add Student</button>
+          <button id="update-student-btn">Update Student</button>
+          <button id="remove-student-btn">Remove Student</button>
+        </form>
+        <table id="student-table">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Student records will be listed here -->
+          </tbody>
+        </table>
+      </div>
+  
+      <!-- Faculty Records Tab -->
+      <div id="faculty-tab" class="tab-content">
+        <h3>Faculty Records</h3>
+        <form id="faculty-form">
+          <label for="faculty-name">Name:</label>
+          <input type="text" id="faculty-name" name="faculty-name"><br><br>
+          <label for="faculty-email">Email:</label>
+          <input type="email" id="faculty-email" name="faculty-email"><br><br>
+          <label for="faculty-id">ID:</label>
+          <input type="number" id="faculty-id" name="faculty-id"><br><br>
+          <button id="add-faculty-btn">Add Faculty</button>
+          <button id="update-faculty-btn">Update Faculty</button>
+          <button id="remove-faculty-btn">Remove Faculty</button>
+        </form>
+        <table id="faculty-table">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Faculty records will be listed here -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  
+      <!--dashboard-->
+      <div class="dashboard-container">
+        <h2>Dashboard</h2>
+        <div class="student-enrollment-trends">
+          <h3>Student Enrollment Trends</h3>
+          <div class="chart-container">
+            <canvas id="enrollment-line-chart"></canvas>
+          </div>
+          <div class="chart-container">
+            <canvas id="enrollment-bar-chart"></canvas>
+          </div>
+        </div>
+        <div class="faculty-course-loads">
+          <h3>Faculty Course Loads</h3>
+          <div class="chart-container">
+            <canvas id="course-distribution-pie-chart"></canvas>
+          </div>
+          <div class="chart-container">
+            <canvas id="faculty-workload-scatter-plot"></canvas>
+          </div>
+        </div>
+        <div class="key-metrics">
+          <h3>Key Metrics</h3>
+          <ul>
+            <li>Total Students Enrolled: <span id="total-students-enrolled">1,234</span></li>
+            <li>Total Faculty Members: <span id="total-faculty-members">50</span></li>
+            <li>Average Course Size: <span id="average-course-size">25</span></li>
+          </ul>
+        </div>
+        <div class="filter-options">
+          <h3>Filter Options</h3>
+          <form>
+            <label>Semester:</label>
+            <select id="semester-select">
+              <option value="fall">Fall</option>
+              <option value="spring">Spring</option>
+              <option value="summer">Summer</option>
+            </select>
+            <br>
+            <label>Department:</label>
+            <select id="department-select">
+              <option value="cs">Computer Science</option>
+              <option value="math">Mathematics</option>
+              <option value="engineering">Engineering</option>
+            </select>
+            <br>
+            <label>Faculty Member:</label>
+            <select id="faculty-member-select">
+              <option value="john-doe">John Doe</option>
+              <option value="jane-smith">Jane Smith</option>
+              <option value="bob-johnson">Bob Johnson</option>
+            </select>
+          </form>
+        </div>
+      </div>
+      </head>
+</body>
+</html>
